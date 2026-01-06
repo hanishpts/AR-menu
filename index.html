@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Food Menu</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.158.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+
+<body>
+  <h1 class="title">Top Menu</h1>
+
+  <div class="menu">
+    <div class="card" onclick="open3D()">
+      <img src="https://i.imgur.com/8Km9tLL.jpg">
+      <h3>Burger</h3>
+      <p>⭐ 4.5 | ₹199</p>
+    </div>
+  </div>
+
+  <!-- 3D MODAL -->
+  <div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <canvas id="threeCanvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
