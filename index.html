@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Food Menu</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.158.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+
+<body>
+
+<h1 class="title">Indian Food Menu</h1>
+
+<button class="cart-btn" onclick="openCart()">
+  🛒 Cart (<span id="cartCount">0</span>)
+</button>
+
+<div class="menu" id="menu"></div>
+
+<!-- CART -->
+<div class="modal" id="cartModal">
+  <div class="box">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <p><b>Total: ₹<span id="totalPrice">0</span></b></p>
+    <button onclick="placeOrder()">Place Order</button>
+    <button onclick="closeCart()">Close</button>
+  </div>
+</div>
+
+<!-- ORDER STATUS -->
+<div class="modal" id="orderModal">
+  <div class="box">
+    <h2>Order Confirmed
